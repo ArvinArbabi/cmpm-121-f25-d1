@@ -1,6 +1,6 @@
 // https://vitejs.dev/config/
 export default {
-  base: "/cmpm-121-f25-d1/",
+  base: Deno.env.get("REPO_NAME") ? `/${Deno.env.get("REPO_NAME")}/` : "/",
   server: {
     port: 3000,
     open: true,
